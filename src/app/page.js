@@ -1,95 +1,48 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import "./Page.css"
+import { CiSearch } from "react-icons/ci";
 
-export default function Home() {
+const ProductCard = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="card">
+      <div className="left">
+        <Image src="/shoe.png" alt="shoe" width={400} height={300} />
+        <i className="fa fa-long-arrow-left"></i>
+        <i className="fa fa-long-arrow-right"></i>
+      </div>
+      <div className="right">
+        <div className="product-info">
+          <div className="product-name">
+            <h1>Airmax</h1>
+            <i className="fa fa-user"></i>
+            <i className="fa fa-shopping-cart"></i>
+          </div>
+          <div className="details">
+            <h3>Winter Collection</h3>
+            <h2>Men Black Sneakers</h2>
+            <h4><span className="fa fa-dollar"></span>150</h4>
+            <h4 className="dis"><span className="fa fa-dollar"></span>200</h4>
+          </div>
+          <ul>
+            <li>SIZE</li>
+            <li className="bg">7</li>
+            <li className="bg">8</li>
+            <li className="bg">9</li>
+            <li className="bg">10</li>
+            <li className="bg">11</li>
+          </ul>
+          <ul>
+            <li>COLOR</li>
+            <li className="yellow"></li>
+            <li className="black"></li>
+            <li className="blue"></li>
+          </ul>
+          <span className="foot"><i className="fa fa-shopping-bag"></i>Buy Now</span>
+          <span className="foot"><i className="fa fa-shopping-cart"></i>Add TO Cart</span>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
+
+export default ProductCard;
